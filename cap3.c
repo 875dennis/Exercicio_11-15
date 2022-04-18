@@ -1,6 +1,4 @@
-//Grupo C05 - Alunos: Dennis Almeida, Lucas do Nascimento, Tatiana Gonçalves
-
-#define ex5
+#define ex1
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -51,16 +49,16 @@ void main()
     int numA,numB;
     char sair;
 do{
-    printf("Digite o primeiro número: ");
+    printf("Digite o primeiro nÃºmero: ");
     scanf("%d",&numA);
 
-    printf("Digite o segundo número: ");
+    printf("Digite o segundo nÃºmero: ");
     scanf("%d",&numB);
 
-    printf("\n\nA soma dos números %d e %d é igual a %d",numA,numB,adicao(numA,numB));
-    printf("\nA subtração dos números %d e %d é igual a %d",numA,numB,subtracao(numA,numB));
-    printf("\nA multiplicação dos números %d e %d é igual a %d",numA,numB,multiplicacao(numA,numB));
-    printf("\nA divisão dos números %d e %d é igual a %.2f",numA,numB,divisao(numA,numB));
+    printf("\n\nA soma dos nÃºmeros %d e %d Ã© igual a %d",numA,numB,adicao(numA,numB));
+    printf("\nA subtraÃ§Ã£o dos nÃºmeros %d e %d Ã© igual a %d",numA,numB,subtracao(numA,numB));
+    printf("\nA multiplicaÃ§Ã£o dos nÃºmeros %d e %d Ã© igual a %d",numA,numB,multiplicacao(numA,numB));
+    printf("\nA divisÃ£o dos nÃºmeros %d e %d Ã© igual a %.2f",numA,numB,divisao(numA,numB));
 
     printf("\n\nDeseja continuar? (s/n): ");
     scanf("%s",&sair);
@@ -120,16 +118,16 @@ main()
 
     printf("\t\tCALCULADOR\n");
 
-    printf("Digite o número: ");
+    printf("Digite o nÃºmero: ");
     scanf("%f",&numA);
 do{
-    printf("Digite uma operação (+ - / *): ");
+    printf("Digite uma operaÃ§Ã£o (+ - / *): ");
     scanf("%s",&opcao);
     if(opcao=='=')
     {
         break;
     }
-    printf("Digite o número: ");
+    printf("Digite o nÃºmero: ");
     scanf("%f",&numB);
 
     switch(opcao)
@@ -166,7 +164,7 @@ do{
         }
         numA=resultado;
 
-    printf("\nEncerrar operação? (s/n)");
+    printf("\nEncerrar operaÃ§Ã£o? (s/n)");
     scanf("%s",&sair);
     getchar();
 }while(sair == 'n');
@@ -205,7 +203,7 @@ char verifLetra(char letra)
 
     if(achouValor == 0)
     {
-         printf("Letra não encontrada no vetor.\n");
+         printf("Letra nÃ£o encontrada no vetor.\n");
     }
     else if(achouValor == 1)
     {
@@ -235,12 +233,12 @@ printf("\n\n Fim do Programa\n\n");
 
 #ifdef ex4
 
-/*4 - Faça um programa receba dois números inteiros e execute as seguintes funções:
-    - Verificar se o número digitado é positivo ou negativo. Sendo que o valor de
-      retorno será 1 se positivo, 0 se negativo ou -1 se for igual a 0.
-    - Se os 2 números são positivos, retorne a soma dos N números existentes entre
+/*4 - FaÃ§a um programa receba dois nÃºmeros inteiros e execute as seguintes funÃ§Ãµes:
+    - Verificar se o nÃºmero digitado Ã© positivo ou negativo. Sendo que o valor de
+      retorno serÃ¡ 1 se positivo, 0 se negativo ou -1 se for igual a 0.
+    - Se os 2 nÃºmeros sÃ£o positivos, retorne a soma dos N nÃºmeros existentes entre
       eles.
-    - Se os 2 números são negativos, retorne a multiplicação dos N números existente
+    - Se os 2 nÃºmeros sÃ£o negativos, retorne a multiplicaÃ§Ã£o dos N nÃºmeros existente
       entre eles.
 */
 
@@ -249,7 +247,7 @@ int positivos(int num1,int num2)
     int result;
 
         result=num1+num2;
-        printf("\nA soma dos números é: %d",result);
+        printf("\nA soma dos nÃºmeros Ã©: %d",result);
 
     return result;
 }
@@ -260,7 +258,7 @@ int negativos(int num1,int num2)
     int result;
 
         result=num1*num2;
-        printf("\nA multiplicação dos números é: %.2d",result);
+        printf("\nA multiplicaÃ§Ã£o dos nÃºmeros Ã©: %.2d",result);
 
     return result;
 }
@@ -295,12 +293,12 @@ do{
     printf("Digite outro numero\n");
     scanf("%d",&num2);
 
-    printf("\nVerificação dos números:\n");
+    printf("\nVerificaÃ§Ã£o dos nÃºmeros:\n");
     printf("1 Positivo\n");
     printf("0 Negativo\n");
     printf("-1 Igual a zero\n");
-    printf("\nRetorno do primeiro número %d",verificar(num1));
-    printf("\nRetorno do segundo número %d\n",verificar(num2));
+    printf("\nRetorno do primeiro nÃºmero %d",verificar(num1));
+    printf("\nRetorno do segundo nÃºmero %d\n",verificar(num2));
 
     if((num1 > 0) && (num2 > 0))
     {
@@ -324,10 +322,10 @@ do{
 
 #ifdef ex5
 /*
-5 - Escreva um programa que receba um numero N. Escreva uma função que
+5 - Escreva um programa que receba um numero N. Escreva uma funÃ§Ã£o que
     retorne a soma dos algarismos de N!. O resultado deve ser mostrado na funcao
     main().
-    Ex: se N = 4, N! = 24. Logo, a soma de seus algarismos ´e 2 + 4 = 6.
+    Ex: se N = 4, N! = 24. Logo, a soma de seus algarismos Â´e 2 + 4 = 6.
 */
 
 int somaDosAlgarismos(int n)
@@ -336,17 +334,17 @@ int somaDosAlgarismos(int n)
     int somaAlg = 0;
     int resto;
 
-    for(fat=1;n>1;n--) // Laço for para achar a fatorial
+    for(fat=1;n>1;n--) // LaÃ§o for para achar a fatorial
     {
         fat*=n;
     }
-     printf("A fatorial é %d",fat);
+     printf("A fatorial Ã© %d",fat);
 
     while(fat > 0) // Enquanto fatorial menor que 0 repete o processo
     {
      resto=fat % 10;   //Resto da fatorial, para achar o ultimo digito
      somaAlg += resto; //soma do resto da fatorial (ultimo digito)
-     fat=fat / 10; //Divisão da fatorial por 10 (para separar o ultimo digito)
+     fat=fat / 10; //DivisÃ£o da fatorial por 10 (para separar o ultimo digito)
     }
 
     return somaAlg; //retorna a soma dos algarismos
@@ -360,9 +358,9 @@ main()
     char sair;
 
 do{
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%d",&n);
-    printf("\nA soma dos algarismos é %d\n\n",somaDosAlgarismos(n));
+    printf("\nA soma dos algarismos Ã© %d\n\n",somaDosAlgarismos(n));
 
     printf("Deseja contiuar? (s/n): ");
     scanf("%s",&sair);
